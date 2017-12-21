@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   def update
     @check_post.new(post_params)
   if @check_post.valid?
-    @post.update
+    @post.update(post_params)
     redirect_to post_path(@post)
   else
     render :edit
