@@ -23,7 +23,7 @@ class AuthorsController < ApplicationController
   def update
     @author = Author.find(params[:id])
 
-    @author.title = post_params[:title]
+    @author.name = post_params[:title]
     @post.content = post_params[:content]
     @post.category = post_params[:category]
 
