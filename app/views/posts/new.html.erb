@@ -22,7 +22,7 @@
     <%= text_field_tag "category" %>
   </div>
 
-  <div class="field">
+  <div class="field<%= ' field_with_errors' if @post.errors[:content].any? %>">
     <%= label_tag "content", "Content" %>
     <%= text_field_tag "content" %>
   </div>
