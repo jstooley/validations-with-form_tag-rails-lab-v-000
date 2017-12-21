@@ -23,8 +23,8 @@ class PostsController < ApplicationController
 
   def update
     @post.title = post_params[:title]
-  if @check_post.valid?
-    set_post!.update(post_params)
+  if @post.valid?
+    @post.save
     redirect_to post_path(@post)
   else
     render :edit
