@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   def update
     @post.title = post_params[:title]
     @post.category = post_params[:category]
-    @post.title = post_params[:content]
+    @post.content = post_params[:content]
   if @post.valid?
     @post.save
     redirect_to post_path(@post)
