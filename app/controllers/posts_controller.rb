@@ -31,6 +31,7 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+    
   end
 
   private
