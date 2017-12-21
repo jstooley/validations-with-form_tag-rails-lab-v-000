@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = set_post!
     @post.title = post_params[:title]
     @post.category = post_params[:category]
     @post.content = post_params[:content]
