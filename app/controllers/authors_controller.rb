@@ -21,7 +21,7 @@ class AuthorsController < ApplicationController
   end
 
   def update
-    @post = Author.find(params[:id])
+    @author = Author.find(params[:id])
 
     @post.title = post_params[:title]
     @post.content = post_params[:content]
