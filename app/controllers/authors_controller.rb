@@ -8,6 +8,7 @@ class AuthorsController < ApplicationController
   end
 
   def edit
+    @
   end
 
   def create
@@ -25,5 +26,8 @@ class AuthorsController < ApplicationController
 
   def author_params
     params.permit(:name, :email, :phone_number)
+  end
+  def set_author!
+    @post = Post.find(params[:id])
   end
 end
