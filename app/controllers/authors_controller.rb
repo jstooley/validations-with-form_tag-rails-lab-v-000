@@ -27,8 +27,8 @@ class AuthorsController < ApplicationController
     @author.email = post_params[:email]
     @author.phone_number = post_params[:phone_number]
 
-    if @post.valid?
-      @post.save
+    if @author.valid?
+      @author.save
       redirect_to post_path(@post)
     else
       render :edit
