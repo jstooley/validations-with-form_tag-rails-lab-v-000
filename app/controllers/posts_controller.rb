@@ -5,12 +5,20 @@ class PostsController < ApplicationController
 
   def new
   end
-  
+
   def edit
     @post = Post.find(params[:id])
   end
 
   def create
+    @post = Post.new(post_params)
+
+    if @author.valid?
+      @author.save
+      redirect_to author_path(@author)
+    else
+      render :new
+    end
   end
 
   def update
