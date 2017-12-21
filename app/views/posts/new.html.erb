@@ -12,12 +12,12 @@
 <% end %>
 
 <%= form_tag posts_path, method: "post" do %>
-  <div class="field">
+  <div class="field<%= ' field_with_errors' if @post.errors[:title].any? %>">
     <%= label_tag "title", "Title" %>
     <%= text_field_tag "title" %>
   </div>
 
-  <div class="field">
+  <div class="field<%= ' field_with_errors' if @post.errors[:category].any? %>">
     <%= label_tag "category", "Category" %>
     <%= text_field_tag "category" %>
   </div>
