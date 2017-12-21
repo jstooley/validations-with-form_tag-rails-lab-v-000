@@ -28,6 +28,6 @@ class AuthorsController < ApplicationController
     params.permit(:name, :email, :phone_number)
   end
   def set_author!
-    @post = Author.find(params[:id])
+    @author = Author.find(params[:id])
   end
 end
