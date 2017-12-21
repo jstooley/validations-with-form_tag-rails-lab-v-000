@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @check_post = Post.new(post_params)
+    @post.title = post_params[:title]
   if @check_post.valid?
     set_post!.update(post_params)
     redirect_to post_path(@post)
