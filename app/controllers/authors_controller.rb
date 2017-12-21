@@ -25,7 +25,7 @@ class AuthorsController < ApplicationController
 
     @author.name = post_params[:name]
     @author.email = post_params[:email]
-    @author.category = post_params[:phone_number]
+    @author.phone_number = post_params[:phone_number]
 
     if @post.valid?
       @post.save
