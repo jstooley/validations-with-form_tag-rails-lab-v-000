@@ -23,9 +23,9 @@ class AuthorsController < ApplicationController
   def update
     @author = Author.find(params[:id])
 
-    @author.name = post_params[:name]
-    @author.email = post_params[:email]
-    @author.phone_number = post_params[:phone_number]
+    @author.name = author_params[:name]
+    @author.email = author_params[:email]
+    @author.phone_number = author_params[:phone_number]
 
     if @author.valid?
       @author.save
