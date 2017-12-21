@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
   def update
     @check_post.new(post_params)
-  if @post.valid?
+  if @check_post.valid?
     @post.save
     redirect_to post_path(@post)
   else
