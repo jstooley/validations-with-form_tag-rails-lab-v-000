@@ -7,7 +7,7 @@ class AuthorsController < ApplicationController
   end
 
   def edit
-    @post = set_author!
+    @author = set_author!
   end
 
   def create
