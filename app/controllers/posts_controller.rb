@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = set_post!
+    set_post!
   end
 
   def create
