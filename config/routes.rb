@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "/posts/:id", to: "posts#show", as: "post"
   get "/posts/new", to: "posts#new", as: "new_post"
-  get "/posts/:id", to: "authors#show", as: "author"
+  get "/posts/:id", to: "posts#show", as: "author"
   get "/posts/:id/edit", to: "posts#edit", as: "edit_post"
   patch "/posts/:id", to: "posts#update"
 end
