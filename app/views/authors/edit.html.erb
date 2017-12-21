@@ -1,10 +1,10 @@
 <h2>Editing "<%= @author.title %>"</h2>
 
-<% if @person.errors.any? %>
+<% if @author.errors.any? %>
   <div id="error_explanation">
     <h2>There were some errors:</h2>
     <ul>
-      <% @person.errors.full_messages.each do |message| %>
+      <% @author.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
