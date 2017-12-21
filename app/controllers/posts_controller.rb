@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    set_post!
   end
 
   def create
